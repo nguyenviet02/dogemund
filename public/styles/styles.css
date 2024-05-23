@@ -1,0 +1,84 @@
+header {
+  background-color: #ffcc00;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo img {
+  width: 50px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+header nav ul li .buy-button {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.hero {
+  background-color: #ffcc00;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+.hero .doge-images img {
+  width: 100px;
+  margin: 10px;
+}
+
+.about, .team-history, .nfts, .memes {
+  padding: 20px;
+  text-align: center;
+}
+
+.nft-gallery, .meme-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nft-gallery img, .meme-gallery img {
+  width: 150px;
+  margin: 10px;
+}
+
+footer {
+  background-color: #ffcc00;
+  padding: 10px;
+  text-align: center;
+}
+
+footer .footer-logo img {
+  width: 50px;
+}
+
+/*# sourceMappingURL=styles.css.map */

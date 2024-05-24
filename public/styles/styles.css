@@ -1,84 +1,303 @@
-header {
-  background-color: #ffcc00;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header .logo img {
-  width: 50px;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+body {
   margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 192rem;
+  margin: 0 auto;
+  padding: 0 clamp(40px, 1.165px + 10.356vi, 200px);
+}
+
+.container-inner {
+  margin: 0 auto;
+  padding: 0 clamp(40px, 1.165px + 10.356vi, 200px);
+}
+
+.section {
+  width: 100%;
+  overflow: hidden;
+}
+
+#section-1 {
+  position: relative;
+  z-index: 1;
+  background: url("../../public/images/bg1.png") no-repeat center center/cover;
+  padding-top: clamp(1.6rem, 0.466px + 4.1424vi, 8rem);
+}
+#section-1 header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(19px, 0.5534px + 4.9191vi, 95px);
+  background-color: #ffda0e;
+  height: clamp(42px, 1.2233px + 10.8738vi, 210px);
+  padding-right: clamp(9px, 0.2621px + 2.3301vi, 45px);
+  padding-left: clamp(40px, 1.165px + 10.356vi, 200px);
+  gap: clamp(42px, 1.2233px + 10.8738vi, 210px);
+}
+#section-1 header .logo {
+  height: clamp(47px, 0.6408px + 12.3625vi, 238px);
+  width: clamp(77px, 1.5146px + 20.1294vi, 388px);
+}
+#section-1 header .logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#section-1 header nav {
+  height: fit-content;
+  font-family: "Inter", sans-serif;
+}
+#section-1 header nav ul {
+  display: flex;
+  margin: 0;
+  height: 100%;
   padding: 0;
+  list-style: none;
+  gap: clamp(8px, 0.233px + 2.0712vi, 40px);
 }
-
-header nav ul li {
-  display: inline;
-}
-
-header nav ul li a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
-
-header nav ul li .buy-button {
-  background-color: red;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.hero {
-  background-color: #ffcc00;
-  text-align: center;
-  padding: 20px;
-}
-
-.hero h1 {
-  font-size: 2.5em;
-}
-
-.hero p {
-  font-size: 1.2em;
-}
-
-.hero .doge-images img {
-  width: 100px;
-  margin: 10px;
-}
-
-.about, .team-history, .nfts, .memes {
-  padding: 20px;
-  text-align: center;
-}
-
-.nft-gallery, .meme-gallery {
+#section-1 header nav ul li {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 3rem;
+  width: fit-content;
+  padding: clamp(4px, 0.1165px + 1.0356vi, 20px);
+}
+#section-1 header nav ul li.active {
+  background-color: #ff0000;
+}
+#section-1 header nav ul li.active a {
+  color: #fff;
+}
+#section-1 header nav ul a {
+  text-decoration: none;
+  font-size: clamp(6px, 0.1748px + 1.5534vi, 30px);
+  font-weight: bold;
+  color: #000;
+}
+#section-1 header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: -99%;
+  height: 100%;
+  width: 100%;
+  background-color: #ffda0e;
+}
+#section-1 header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  right: -99%;
+  height: 100%;
+  width: 100%;
+  background-color: #ffda0e;
+}
+#section-1 .hero {
+  position: relative;
+  width: 100%;
+  height: clamp(110px, 3.2039px + 28.479vi, 550px);
+  background: url("../../public/images/bg-hero.png") no-repeat center center;
+  background-size: cover;
+  padding-left: clamp(16px, 0.466px + 4.1424vi, 80px);
+  padding-right: 0;
+  display: flex;
+  align-items: center;
+}
+#section-1 .hero::before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * clamp(5px, 0.1456px + 1.2945vi, 25px));
+  right: 0;
+  width: clamp(174px, 5.068px + 45.0485vi, 870px);
+  height: clamp(132px, 3.8447px + 34.1748vi, 660px);
+  background: url("../../public/images/hero-img.png") no-repeat center center;
+  background-size: cover;
+}
+#section-1 .hero .hero-text {
+  font-family: "Brownista Regular";
+  color: #000;
+  display: flex;
+  flex-direction: column;
+}
+#section-1 .hero .hero-text h1:first-child {
+  font-size: clamp(24px, 0.699px + 6.2136vi, 120px);
+  font-weight: 500;
+}
+#section-1 .hero .hero-text h1:nth-child(2) {
+  font-size: clamp(19px, 0.5534px + 4.9191vi, 95px);
+  font-weight: 400;
+  font-style: italic;
+}
+#section-1 .hero .hero-text p {
+  font-size: clamp(6.6px, 0.1922px + 1.7087vi, 33px);
+  padding-left: 1rem;
+}
+#section-1 .hero .hero-image {
+  width: clamp(174px, 5.068px + 45.0485vi, 870px);
+  height: clamp(132px, 3.8447px + 34.1748vi, 660px);
+}
+#section-1 .hero .hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#section-1 .hero-contact {
+  width: 100%;
+  height: clamp(24px, 0.699px + 6.2136vi, 120px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Brownista Regular";
+  gap: 10rem;
+}
+#section-1 .hero-contact h2 {
+  font-size: clamp(6.6px, 0.1922px + 1.7087vi, 33px);
+  color: #ffda0e;
+}
+#section-1 .contract-add {
+  width: 100%;
+  height: clamp(12px, 0.3495px + 3.1068vi, 60px);
+  padding-left: clamp(60px, 1.7476px + 15.534vi, 300px);
+  background-color: #ffda0e;
+  display: flex;
+  align-items: center;
+  font-family: "Brownista Regular";
+}
+#section-1 .contract-add h2 {
+  color: #000;
+  font-weight: 400;
+  font-size: clamp(6.6px, 0.1922px + 1.7087vi, 33px);
+}
+#section-1 .about {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+}
+#section-1 .about-text {
+  width: 65%;
+  font-family: "Brownista Regular";
+}
+#section-1 .about-text h1 {
+  font-size: clamp(20px, 0.5825px + 5.178vi, 100px);
+  color: #fff;
+  line-height: clamp(17px, 0.0097px + 4.5307vi, 87px);
+  font-weight: 400;
+}
+#section-1 .about-text h2 {
+  font-size: clamp(20px, 0.5825px + 5.178vi, 100px);
+  color: #ffda0e;
+  line-height: clamp(17px, 0.0097px + 4.5307vi, 87px);
+  margin-bottom: clamp(12px, 0.3495px + 3.1068vi, 60px);
+  font-weight: 400;
+}
+#section-1 .about-text p {
+  font-size: clamp(8px, 0.233px + 2.0712vi, 40px);
+  font-weight: 400;
+  color: #fff;
+}
+#section-1 .about-image {
+  width: 35%;
+}
+#section-1 .about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#section-1 .team-history {
+  width: 100%;
+  height: clamp(110px, 3.2039px + 28.479vi, 550px);
+  background: url("../../public/images/bg-team-history.png") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(4px, 0.1165px + 1.0356vi, 20px);
+}
+#section-1 .team-history-image {
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+#section-1 .team-history-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#section-1 .team-history-text {
+  font-family: "Brownista Regular";
+}
+#section-1 .team-history-text h2 {
+  font-size: clamp(20px, 0.5825px + 5.178vi, 100px);
+  color: #000;
+  line-height: clamp(17px, 0.0097px + 4.5307vi, 87px);
+  font-weight: 400;
+}
+#section-1 .team-history-text p {
+  margin-top: clamp(8px, 0.233px + 2.0712vi, 40px);
+  padding-left: 1rem;
+  padding-right: clamp(16px, 0.466px + 4.1424vi, 80px);
+  font-size: clamp(4.1px, -0.4874px + 1.2233vi, 23px);
+  font-weight: 400;
+  color: #000;
+}
+#section-1 .contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(8px, 0.233px + 2.0712vi, 40px);
+  padding-block: clamp(6px, 0.1748px + 1.5534vi, 30px);
+}
+#section-1 .contact-btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
 }
 
-.nft-gallery img, .meme-gallery img {
-  width: 150px;
-  margin: 10px;
+#section-2 {
+  width: 100%;
+  padding-block: clamp(10px, 0.2913px + 2.589vi, 50px);
+  background-color: #02051d;
 }
-
-footer {
-  background-color: #ffcc00;
-  padding: 10px;
+#section-2 .nfts {
+  font-family: "Brownista Regular";
+}
+#section-2 .nfts h2 {
+  font-size: clamp(20px, 0.5825px + 5.178vi, 100px);
+  line-height: clamp(17px, 0.0097px + 4.5307vi, 87px);
+  color: #ffda0e;
+  font-weight: 500;
   text-align: center;
+  margin-bottom: clamp(8px, 0.233px + 2.0712vi, 40px);
 }
-
-footer .footer-logo img {
-  width: 50px;
+#section-2 .nfts h2 span {
+  color: #fff;
+}
+#section-2 .nfts .nft-gallery {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(6px, 0.1748px + 1.5534vi, 30px);
+}
+#section-2 .nfts .nft-gallery .nft-image {
+  width: 100%;
+}
+#section-2 .nfts .nft-gallery .nft-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=styles.css.map */

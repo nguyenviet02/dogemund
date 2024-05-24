@@ -6,9 +6,9 @@ body {
 }
 
 .container {
-  width: 100%;
-  max-width: 192rem;
   margin: 0 auto;
+  max-width: 192rem;
+  width: 100%;
   padding: 0 clamp(40px, 1.165px + 10.356vi, 200px);
 }
 
@@ -30,16 +30,36 @@ body {
 }
 #section-1 header {
   position: relative;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: clamp(19px, 0.5534px + 4.9191vi, 95px);
   background-color: #ffda0e;
   height: clamp(42px, 1.2233px + 10.8738vi, 210px);
+  width: 100%;
   padding-right: clamp(9px, 0.2621px + 2.3301vi, 45px);
   padding-left: clamp(40px, 1.165px + 10.356vi, 200px);
   gap: clamp(42px, 1.2233px + 10.8738vi, 210px);
+}
+#section-1 header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -99%;
+  background-color: #ffda0e;
+  height: 100%;
+  width: 100%;
+}
+#section-1 header::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -99%;
+  background-color: #ffda0e;
+  height: 100%;
+  width: 100%;
 }
 #section-1 header .logo {
   height: clamp(47px, 0.6408px + 12.3625vi, 238px);
@@ -82,81 +102,61 @@ body {
   font-weight: bold;
   color: #000;
 }
-#section-1 header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  left: -99%;
-  height: 100%;
-  width: 100%;
-  background-color: #ffda0e;
-}
-#section-1 header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  right: -99%;
-  height: 100%;
-  width: 100%;
-  background-color: #ffda0e;
-}
 #section-1 .hero {
   position: relative;
-  width: 100%;
-  height: clamp(110px, 3.2039px + 28.479vi, 550px);
-  background: url("../../public/images/bg-hero.png") no-repeat center center;
-  background-size: cover;
-  padding-left: clamp(16px, 0.466px + 4.1424vi, 80px);
-  padding-right: 0;
   display: flex;
   align-items: center;
+  background: url("../../public/images/bg-hero.png") no-repeat center center;
+  background-size: cover;
+  height: clamp(110px, 3.2039px + 28.479vi, 550px);
+  width: 100%;
+  padding-right: 0;
+  padding-left: clamp(16px, 0.466px + 4.1424vi, 80px);
 }
 #section-1 .hero::before {
   content: "";
   position: absolute;
   top: calc(-1 * clamp(5px, 0.1456px + 1.2945vi, 25px));
   right: 0;
-  width: clamp(174px, 5.068px + 45.0485vi, 870px);
-  height: clamp(132px, 3.8447px + 34.1748vi, 660px);
   background: url("../../public/images/hero-img.png") no-repeat center center;
   background-size: cover;
+  height: clamp(132px, 3.8447px + 34.1748vi, 660px);
+  width: clamp(174px, 5.068px + 45.0485vi, 870px);
 }
 #section-1 .hero .hero-text {
-  font-family: "Brownista Regular";
-  color: #000;
   display: flex;
   flex-direction: column;
+  font-family: "Brownista Regular";
+  color: #000;
 }
 #section-1 .hero .hero-text h1:first-child {
   font-size: clamp(24px, 0.699px + 6.2136vi, 120px);
   font-weight: 500;
 }
 #section-1 .hero .hero-text h1:nth-child(2) {
+  font-style: italic;
   font-size: clamp(19px, 0.5534px + 4.9191vi, 95px);
   font-weight: 400;
-  font-style: italic;
 }
 #section-1 .hero .hero-text p {
-  font-size: clamp(6.6px, 0.1922px + 1.7087vi, 33px);
   padding-left: clamp(2px, 0.0583px + 0.5178vi, 10px);
+  font-size: clamp(6.6px, 0.1922px + 1.7087vi, 33px);
 }
 #section-1 .hero .hero-image {
-  width: clamp(174px, 5.068px + 45.0485vi, 870px);
   height: clamp(132px, 3.8447px + 34.1748vi, 660px);
+  width: clamp(174px, 5.068px + 45.0485vi, 870px);
 }
 #section-1 .hero .hero-image img {
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: contain;
 }
 #section-1 .hero-contact {
-  width: 100%;
-  height: clamp(24px, 0.699px + 6.2136vi, 120px);
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  height: clamp(24px, 0.699px + 6.2136vi, 120px);
+  width: 100%;
   font-family: "Brownista Regular";
   gap: clamp(20px, 0.5825px + 5.178vi, 100px);
 }
@@ -165,25 +165,25 @@ body {
   color: #ffda0e;
 }
 #section-1 .contract-add {
-  width: 100%;
-  height: clamp(12px, 0.3495px + 3.1068vi, 60px);
-  padding-left: clamp(60px, 1.7476px + 15.534vi, 300px);
-  background-color: #ffda0e;
   display: flex;
   align-items: center;
+  background-color: #ffda0e;
+  height: clamp(12px, 0.3495px + 3.1068vi, 60px);
+  width: 100%;
+  padding-left: clamp(60px, 1.7476px + 15.534vi, 300px);
   font-family: "Brownista Regular";
 }
 #section-1 .contract-add h2 {
-  color: #000;
-  font-weight: 400;
   font-size: clamp(6.6px, 0.1922px + 1.7087vi, 33px);
+  font-weight: 400;
+  color: #000;
 }
 #section-1 .about {
-  width: 100%;
-  height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: fit-content;
+  width: 100%;
   padding-top: 2rem;
 }
 #section-1 .about-text {
@@ -192,16 +192,16 @@ body {
 }
 #section-1 .about-text h1 {
   font-size: clamp(20px, 0.5825px + 5.178vi, 100px);
-  color: #fff;
   line-height: clamp(17px, 0.0097px + 4.5307vi, 87px);
   font-weight: 400;
+  color: #fff;
 }
 #section-1 .about-text h2 {
-  font-size: clamp(20px, 0.5825px + 5.178vi, 100px);
-  color: #ffda0e;
-  line-height: clamp(17px, 0.0097px + 4.5307vi, 87px);
   margin-bottom: clamp(12px, 0.3495px + 3.1068vi, 60px);
+  font-size: clamp(20px, 0.5825px + 5.178vi, 100px);
+  line-height: clamp(17px, 0.0097px + 4.5307vi, 87px);
   font-weight: 400;
+  color: #ffda0e;
 }
 #section-1 .about-text p {
   font-size: clamp(8px, 0.233px + 2.0712vi, 40px);
@@ -212,17 +212,17 @@ body {
   width: 35%;
 }
 #section-1 .about-image img {
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 #section-1 .team-history {
-  width: 100%;
-  height: clamp(110px, 3.2039px + 28.479vi, 550px);
-  background: url("../../public/images/bg-team-history.png") no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url("../../public/images/bg-team-history.png") no-repeat center center/cover;
+  height: clamp(110px, 3.2039px + 28.479vi, 550px);
+  width: 100%;
   gap: clamp(4px, 0.1165px + 1.0356vi, 20px);
 }
 #section-1 .team-history-image {
@@ -230,8 +230,8 @@ body {
   aspect-ratio: 1/1;
 }
 #section-1 .team-history-image img {
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 #section-1 .team-history-text {
@@ -239,35 +239,35 @@ body {
 }
 #section-1 .team-history-text h2 {
   font-size: clamp(20px, 0.5825px + 5.178vi, 100px);
-  color: #000;
   line-height: clamp(17px, 0.0097px + 4.5307vi, 87px);
   font-weight: 400;
+  color: #000;
 }
 #section-1 .team-history-text p {
   margin-top: clamp(8px, 0.233px + 2.0712vi, 40px);
-  padding-left: clamp(2px, 0.0583px + 0.5178vi, 10px);
   padding-right: clamp(16px, 0.466px + 4.1424vi, 80px);
+  padding-left: clamp(2px, 0.0583px + 0.5178vi, 10px);
   font-size: clamp(4.1px, -0.4874px + 1.2233vi, 23px);
   font-weight: 400;
   color: #000;
 }
 #section-1 .contact {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   gap: clamp(8px, 0.233px + 2.0712vi, 40px);
   padding-block: clamp(6px, 0.1748px + 1.5534vi, 30px);
 }
 #section-1 .contact-btn {
-  border: none;
   outline: none;
+  border: none;
   background-color: transparent;
   width: clamp(12px, 0.3495px + 3.1068vi, 60px);
 }
 #section-1 .contact-btn img {
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 #section-1 .contact-text {
@@ -275,9 +275,9 @@ body {
 }
 #section-1 .contact-text h2 {
   font-size: clamp(20px, 0.5825px + 5.178vi, 100px);
-  color: #ffda0e;
   line-height: clamp(17px, 0.0097px + 4.5307vi, 87px);
   font-weight: 400;
+  color: #ffda0e;
 }
 #section-1 .contact-text p {
   font-size: clamp(8px, 0.233px + 2.0712vi, 40px);
@@ -286,96 +286,96 @@ body {
 }
 
 #section-2 {
+  background-color: #02051d;
   width: 100%;
   padding-block: clamp(10px, 0.2913px + 2.589vi, 50px);
-  background-color: #02051d;
 }
 #section-2 .nfts {
   font-family: "Brownista Regular";
 }
 #section-2 .nfts h2 {
+  margin-bottom: clamp(8px, 0.233px + 2.0712vi, 40px);
   font-size: clamp(20px, 0.5825px + 5.178vi, 100px);
   line-height: clamp(17px, 0.0097px + 4.5307vi, 87px);
-  color: #ffda0e;
   font-weight: 500;
+  color: #ffda0e;
   text-align: center;
-  margin-bottom: clamp(8px, 0.233px + 2.0712vi, 40px);
 }
 #section-2 .nfts h2 span {
   color: #fff;
 }
 #section-2 .nfts .nft-gallery {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   gap: clamp(6px, 0.1748px + 1.5534vi, 30px);
 }
 #section-2 .nfts .nft-gallery .nft-image {
   width: 100%;
 }
 #section-2 .nfts .nft-gallery .nft-image img {
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
 #section-3 {
-  width: 100%;
-  height: fit-content;
   background: url("../../public/images/bg-memes.png") no-repeat bottom/cover;
+  height: fit-content;
+  width: 100%;
   padding-top: clamp(16px, 0.466px + 4.1424vi, 80px);
 }
 #section-3 h2 {
+  margin-bottom: clamp(12px, 0.3495px + 3.1068vi, 60px);
   font-family: "Brownista Regular";
   font-size: clamp(20px, 0.5825px + 5.178vi, 100px);
-  color: #fff;
   line-height: clamp(17px, 0.0097px + 4.5307vi, 87px);
-  text-align: center;
   font-weight: 400;
-  margin-bottom: clamp(12px, 0.3495px + 3.1068vi, 60px);
+  color: #fff;
+  text-align: center;
 }
 #section-3 .meme-gallery {
-  width: 100%;
-  display: grid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 0 auto;
-  padding-inline: clamp(16px, 0.466px + 4.1424vi, 80px);
-  grid-template-columns: repeat(auto-fit, minmax(min(clamp(102px, 27.2427px + 19.9353vi, 410px), 100%), 3fr));
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: clamp(12px, 0.3495px + 3.1068vi, 60px);
-  grid-row-gap: clamp(12px, 0.3495px + 3.1068vi, 60px);
+  gap: clamp(12px, 0.3495px + 3.1068vi, 60px);
   margin-bottom: clamp(24px, 0.699px + 6.2136vi, 120px);
+  width: 100%;
+  padding-inline: clamp(16px, 0.466px + 4.1424vi, 80px);
 }
 #section-3 .meme-gallery .meme-image {
-  width: 100%;
+  width: 30%;
 }
 #section-3 .meme-gallery .meme-image img {
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 #section-3 footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-block: clamp(28px, 0.8155px + 7.2492vi, 140px);
   background: url("../../public/images/bg-footer.png") no-repeat top/cover;
+  padding-block: clamp(28px, 0.8155px + 7.2492vi, 140px);
 }
 #section-3 footer .footer-logo {
   width: clamp(281px, 76.3883px + 54.5631vi, 1124px);
 }
 #section-3 footer .footer-logo img {
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
 .sticky {
   position: fixed !important;
+  z-index: 1000;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000;
 }
 
 .sticky + .container {

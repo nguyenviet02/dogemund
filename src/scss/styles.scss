@@ -404,8 +404,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-		padding-block: clamp(28px, 0.8155px + 7.2492vi, 140px);
-		background: url("../../public/images/bg-footer.png") no-repeat center/cover;
+    padding-block: clamp(28px, 0.8155px + 7.2492vi, 140px);
+    background: url('../../public/images/bg-footer.png') no-repeat top/cover;
     .footer-logo {
       width: clamp(281px, 76.3883px + 54.5631vi, 1124px);
       img {
@@ -417,59 +417,14 @@ body {
   }
 }
 
-// .buy-btn {
-//   border: none;
-//   border-radius: 0.5rem; // 5px
-//   background: $accent-color;
-//   padding: 1rem 2rem; // 10px 20px
-//   color: $text-color;
-//   cursor: pointer;
-// }
+.sticky {
+  position: fixed !important;
+  top:0;
+	left: 50%;
+	transform: translateX(-50%);
+  z-index: 1000;
+}
 
-// .social-links {
-//   display: flex;
-//   justify-content: center;
-//   background: $nav-text-color;
-//   padding: 2rem 0; // 20px 0
-//   gap: 2rem; // 20px
-// }
-
-// .social-links a {
-//   text-decoration: none;
-//   color: $text-color;
-// }
-
-// .about,
-// .team-history,
-// .nfts,
-// .memes {
-//   padding: 5rem 2rem; // 50px 20px
-//   text-align: center;
-// }
-
-// .about img,
-// .team-history img,
-// .nft-images img,
-// .meme-images img {
-//   margin: 2rem 0; // 20px 0
-//   max-width: 30rem; // 300px
-//   width: 100%;
-// }
-
-// .nft-images,
-// .meme-images {
-//   display: flex;
-//   justify-content: center;
-//   flex-wrap: wrap;
-//   gap: 1rem; // 10px
-// }
-
-// footer {
-//   background: $primary-color;
-//   padding: 2rem 0; // 20px 0
-//   text-align: center;
-// }
-
-// footer img {
-//   width: 10rem; // 100px
-// }
+.sticky + .container {
+  padding-top: clamp(58px, 1.6893px + 15.0162vi, 290px);
+}

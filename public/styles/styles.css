@@ -359,7 +359,7 @@ body {
   justify-content: center;
   align-items: center;
   padding-block: clamp(28px, 0.8155px + 7.2492vi, 140px);
-  background: url("../../public/images/bg-footer.png") no-repeat center/cover;
+  background: url("../../public/images/bg-footer.png") no-repeat top/cover;
 }
 #section-3 footer .footer-logo {
   width: clamp(281px, 76.3883px + 54.5631vi, 1124px);
@@ -368,6 +368,18 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.sticky + .container {
+  padding-top: clamp(58px, 1.6893px + 15.0162vi, 290px);
 }
 
 /*# sourceMappingURL=styles.css.map */

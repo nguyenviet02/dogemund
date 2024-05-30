@@ -176,20 +176,20 @@ body {
     }
   }
 
-  .hero-contact {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: clamp(24px, 0.699px + 6.2136vi, 120px);
-    width: 100%;
-    font-family: 'Brownista Regular';
-    gap: clamp(20px, 0.5825px + 5.178vi, 100px);
+  // .hero-contact {
+  //   display: flex;
+  //   justify-content: flex-start;
+  //   align-items: center;
+  //   height: clamp(24px, 0.699px + 6.2136vi, 120px);
+  //   width: 100%;
+  //   font-family: 'Brownista Regular';
+  //   gap: clamp(20px, 0.5825px + 5.178vi, 100px);
 
-    h2 {
-      font-size: clamp(6.6px, 0.1922px + 1.7087vi, 33px);
-      color: $primary-color;
-    }
-  }
+  //   h2 {
+  //     font-size: clamp(6.6px, 0.1922px + 1.7087vi, 33px);
+  //     color: $primary-color;
+  //   }
+  // }
 
   .contract-add {
     display: flex;
@@ -288,7 +288,7 @@ body {
 
   .contact {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     gap: clamp(8px, 0.233px + 2.0712vi, 40px);
